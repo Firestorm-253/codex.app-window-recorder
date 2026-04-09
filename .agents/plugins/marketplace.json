@@ -1,0 +1,20 @@
+{
+  "name": "app-window-recorder-local",
+  "interface": {
+    "displayName": "App Window Recorder"
+  },
+  "plugins": [
+    {
+      "name": "app-window-recorder",
+      "source": {
+        "source": "local",
+        "path": "./plugins/app-window-recorder"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

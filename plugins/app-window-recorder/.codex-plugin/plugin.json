@@ -1,0 +1,35 @@
+{
+  "name": "app-window-recorder",
+  "version": "0.1.0",
+  "description": "Record a launched or attached Windows app window, extract frames, and return the artifacts to Codex.",
+  "author": {
+    "name": "Zehnder"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "mcp",
+    "windows",
+    "screen-recording",
+    "ffmpeg",
+    "codex"
+  ],
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "App Window Recorder",
+    "shortDescription": "Record a single app window and return frames.",
+    "longDescription": "Launch or attach to a Windows app window, capture only the window view, extract frames, and return absolute artifact paths for Codex analysis.",
+    "developerName": "Zehnder",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Record notepad.exe for 5 seconds and return the extracted frames.",
+      "List visible app windows I can attach to for capture.",
+      "Attach to an already-running app window and save a short capture."
+    ],
+    "brandColor": "#1F6FEB"
+  }
+}

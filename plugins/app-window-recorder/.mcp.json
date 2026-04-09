@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "app-window-recorder": {
+      "command": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "./scripts/start-server.ps1"
+      ]
+    }
+  }
+}

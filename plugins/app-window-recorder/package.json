@@ -1,0 +1,14 @@
+{
+  "name": "app-window-recorder",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Windows-only Codex MCP plugin for app-window recording and frame extraction.",
+  "scripts": {
+    "start": "node ./scripts/server.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.24.2"
+  }
+}
