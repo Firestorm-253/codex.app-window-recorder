@@ -1,25 +1,57 @@
-# App Window Recorder Repo Bundle
+# App Window Recorder
 
-This folder is a standalone repo-local Codex plugin bundle for the App Window Recorder plugin.
+This repository is a standalone Codex plugin bundle for App Window Recorder.
 
-Repo layout:
+If you only want to install and use the plugin, start here:
 
-- `.agents/plugins/marketplace.json` registers the plugin for Codex when this repo is opened.
-- `plugins/app-window-recorder/` contains the full plugin source and package manifests.
+1. Run `npm install` in `plugins/app-window-recorder`.
+2. Open this repository in Codex.
+3. Reload plugins or restart Codex.
+4. Enable `App Window Recorder` from the Plugins tab.
 
-What to commit:
+## Repository Layout
 
-- everything in this folder, including `package-lock.json`
+- `.agents/plugins/marketplace.json` registers the plugin for this repository.
+- `plugins/app-window-recorder/` contains the actual plugin.
 
-What is intentionally excluded:
+## Installation Requirements
+
+- Windows
+- Node.js 18 or newer
+- Windows PowerShell
+- `ffmpeg` on `PATH`
+- `ffprobe` on `PATH`
+
+## Usage
+
+After the plugin is enabled in Codex, use its tools:
+
+- `list_app_windows`
+- `record_app_window`
+
+The detailed user documentation lives in:
+
+- `plugins/app-window-recorder/README.md`
+
+## What To Commit
+
+Commit everything in this repository except installed dependencies and generated artifacts.
+
+Already excluded:
 
 - `plugins/app-window-recorder/node_modules/`
-- generated capture artifacts under `C:\Users\Zehnder\.codex\tmp\app-window-recorder\`
-- the separately installed home-local plugin copy under `C:\Users\Zehnder\plugins\app-window-recorder\`
+- `plugins/app-window-recorder/.npm/`
+- `plugins/app-window-recorder/npm-debug.log*`
 
-To use this as its own git repo:
+Not stored in this repo:
 
-1. Initialize git in this folder or copy this folder into a new repository.
-2. Run `npm install` in `plugins/app-window-recorder`.
-3. Open the repo in Codex and reload plugins.
-4. Install or enable `App Window Recorder` from the Plugins tab.
+- generated captures under `C:\Users\<you>\.codex\tmp\app-window-recorder\`
+
+## First Run Checklist
+
+1. Run `npm install` in `plugins/app-window-recorder`.
+2. Confirm `ffmpeg -version` works in a terminal.
+3. Open the repo in Codex.
+4. Make sure the plugin appears in the Plugins tab.
+5. Enable it.
+6. Call `list_app_windows` before the first recording so you can confirm your target window is detectable.
